@@ -174,4 +174,42 @@ a {
         padding: 3px 5px;
         font-size: 10px;
     }
+
+        .name {
+        display: none;
+        padding: 0;
+        font-size: 20px;
+        flex-wrap: nowrap;
+    }
+
+    .designer {
+        display: none;
+    }
+
+     .navbar {
+        top: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .navoptions {
+        padding: 0;
+        gap: 25px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar ul li {
+        font-size: 12px;
+    }
 }
