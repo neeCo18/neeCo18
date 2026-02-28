@@ -15,6 +15,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 70px;
     display: flex;
     flex-direction: column;
     padding: 0 30px;
@@ -50,6 +51,7 @@ a {
     font-weight: bold;
     background-color: rgb(243, 243, 243);
     padding: 8px 8px 8px 8px;
+    border-radius: 8px;
 }
 
 .contact:hover {
@@ -87,18 +89,21 @@ a {
     background-color: rgb(244, 244, 244);
 }
 
+.navbar.hide {
+    transform: translateY(-100%);
+}
+
 /* CONTENT */
 .container {
-    margin-top: 120px;
-    /* space for fixed header + nav */
     padding: 20px;
     display: flex;
     gap: 25px;
+    justify-content: center;
     align-items: center;
     background-color: rgba(248, 248, 248, 0.956);
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    margin: auto;
     border-radius: 25px;
 }
 
@@ -157,6 +162,7 @@ a {
             }
 
     .navbar {
+            position: fixed;
             top: 0;
             width: 100%;
             flex-direction: column;
@@ -164,7 +170,7 @@ a {
         }
     
         .nav-row {
-            display: flex;
+            position: relative;
             justify-content: center;
             align-items: center;
             padding: 0 15px;
@@ -192,15 +198,16 @@ a {
             margin-top: -35px;
             font-size: 16px;
         }
+        
     
         .desc {
-            font-size: 18px;
+            font-size: 12px;
             padding-right: 10px;
             text-align: justify;
         }
 
     .pic {
-        max-width: 350px;
+        width: fit-content;
     }
 
     .XU {
@@ -208,14 +215,17 @@ a {
     }
 
     .container {
+        align-items: flex-start;
         width: 80%;
-        padding: 50px;
+        padding: 20px;
+        margin-top: 90px;
+        margin-bottom: auto;
         flex-direction: column;
         text-align: center;
     }
 
     .Name {
-        font-size: 2rem;
+        font-size: 20px;
         text-align: left;
     }
 
