@@ -342,9 +342,6 @@ body {
     .prjcts_title {
         font-size: 50px;
     }
-
-    .prjcts {
-    }
     
     .prjects_ul {
         flex-direction: column;
@@ -353,6 +350,18 @@ body {
 
     .librarycard_desc {
         font-size: 15px;
+    }
+
+    .prjcts_librarycard{
+        user-select: none;
+    }
+
+    .prjcts_schedule{
+        user-select: none;
+    }
+
+    .prjcts_valentinescard {
+        user-select: none;
     }
 
     .prjcts_librarycard:hover {
