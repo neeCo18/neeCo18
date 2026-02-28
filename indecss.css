@@ -189,7 +189,7 @@ body {
 .prjcts_librarycard:hover {
     color: rgb(255, 230, 119);
     transition: 0.3s ease-in-out;
-    font-size: 80px;
+    font-size: 50px;
     opacity: 1;
 }
 
@@ -199,14 +199,14 @@ body {
 
 .librarycard_desc {
     opacity: 0;
-    font-size: 30px;
+    font-size: 20px;
     transition: opacity 0.3s ease-in-out;
 }
 
 .prjcts_schedule:hover {
     color: rgb(255, 230, 119);
     transition: 0.3s ease-in-out;
-    font-size: 80px;
+    font-size: 50px;
     opacity: 1;
 }
 
@@ -216,14 +216,14 @@ body {
 
 .schedule_desc {
     opacity: 0;
-    font-size: 30px;
+    font-size: 20px;
     transition: opacity 0.3s ease-in-out;
 }
 
 .prjcts_valentinescard:hover {
     color: rgb(255, 230, 119);
     transition: 0.3s ease-in-out;
-    font-size: 80px;
+    font-size: 50px;
     opacity: 1;
 }
 
@@ -233,8 +233,26 @@ body {
 
 .valcard_desc {
     opacity: 0;
-    font-size: 30px;
+    font-size: 20px;
     transition: opacity 0.3s ease-in-out;
+}
+
+.prjcts_librarycard:after {
+    content: "↗";
+    margin-left: 2px;
+    display: inline-block;
+}
+
+.prjcts_schedule:after {
+    content: "↗";
+    margin-left: 2px;
+    display: inline-block;
+}
+
+.prjcts_valentinescard:after {
+    content: "↗";
+    margin-left: 2px;
+    display: inline-block;
 }
 
 .empty {
@@ -351,18 +369,6 @@ body {
     .librarycard_desc {
         opacity: 100;
         font-size: 15px;
-    }
-
-    .prjcts_librarycard{
-        user-select: none;
-    }
-
-    .prjcts_schedule{
-        user-select: none;
-    }
-
-    .prjcts_valentinescard {
-        user-select: none;
     }
 
     .prjcts_librarycard:hover {
