@@ -338,4 +338,40 @@ body {
     .socials li {
         font-size: 15px;
     }
+
+    .prjcts_title {
+        font-size: 50px;
+    }
+
+    .prjcts {
+    }
+    
+    .prjects_ul {
+        flex-direction: column;
+        font-size: 1px;
+    }
+
+    .librarycard_desc {
+        font-size: 15px;
+    }
+
+    .prjcts_librarycard:hover {
+        font-size: 45px;
+    }
+        
+    .schedule_desc {
+        font-size: 15px;
+    }
+    
+    .prjcts_schedule:hover {
+        font-size: 45px;
+    }
+
+    .valcard_desc {
+        font-size: 15px;
+    }
+
+    .prjcts_valentinescard:hover {
+        font-size: 45px;
+    }
 }
