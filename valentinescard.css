@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(255, 171, 171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+a:hover {
+    color: rgb(158, 158, 158);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.envelope-wrapper {
+    position: relative;
+    transition: transform 0.8s ease-in-out;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.envelope-wrapper.moved {
+    transform: translateX(-200px);
+}
+
+#envelope {
+    position: relative;
+    height: 180px;
+    width: 280px;
+    background-color: #FF6863;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#envelope:hover {
+    transform: scale(1.05);
+}
+
+.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flap {
+    border-top: 98px solid #FF6863;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    z-index: 3;
+    transform-origin: top;
+    transition: transform 0.4s ease-in-out;
+}
+
+.moved .flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.pocket {
+    border-left: 140px solid #f03131;
+    border-right: 140px solid #f03131;
+    border-bottom: 90px solid rgb(238, 18, 18);
+    border-top: 90px solid transparent;
+    border-radius: 6px;
+    z-index: 4;
+}
+
+.message {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: translateX(100px);
+    transition: all 0.8s ease-in-out;
+    z-index: 1;
+    text-align: justify;
+}
+
+.message.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(200px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .envelope-wrapper.moved {
+        transform: translateY(-150px);
+    }
+
+    .message {
+        width: 85%;
+        transform: translateY(100px);
+    }
+
+    .message.is-visible {
+        transform: translateY(180px);
+    }
+}
+
+.heart {
+    position: fixed;
+    /* Ensures they stay relative to the screen */
+    width: 15px;
+    height: 15px;
+    background-color: #f03131;
+    transform: rotate(-45deg);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #f03131;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -8px;
+    left: 0;
+}
+
+.heart::after {
+    left: 8px;
+    top: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(-45deg) scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10vh) rotate(-45deg) scale(1.2);
+        opacity: 0;
+    }
+}

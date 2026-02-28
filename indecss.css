@@ -157,6 +157,91 @@ body {
     font-size: 20px;
 }
 
+.prjcts {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 90%;
+    align-items: start;
+}
+
+.prjcts_title {
+    color: white;
+    font-size: 80px;
+}
+
+.prjcts ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    align-items: start;
+    padding: 0;
+    gap: 25px;
+    justify-content: space-between;
+    color: white;
+}
+
+.prjcts a{
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.prjcts_librarycard:hover {
+    color: rgb(255, 230, 119);
+    transition: 0.3s ease-in-out;
+    font-size: 80px;
+    opacity: 1;
+}
+
+.prjects_ul li:hover+.librarycard_desc {
+    opacity: 1;
+}
+
+.librarycard_desc {
+    opacity: 0;
+    font-size: 30px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.prjcts_schedule:hover {
+    color: rgb(255, 230, 119);
+    transition: 0.3s ease-in-out;
+    font-size: 80px;
+    opacity: 1;
+}
+
+.prjects_ul li:hover+.schedule_desc {
+    opacity: 1;
+}
+
+.schedule_desc {
+    opacity: 0;
+    font-size: 30px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.prjcts_valentinescard:hover {
+    color: rgb(255, 230, 119);
+    transition: 0.3s ease-in-out;
+    font-size: 80px;
+    opacity: 1;
+}
+
+.prjects_ul li:hover+.valcard_desc {
+    opacity: 1;
+}
+
+.valcard_desc {
+    opacity: 0;
+    font-size: 30px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.empty {
+    width: 90%;
+    height: 150px;
+}
+
 .backtotop{
     display: flex;
     justify-content: center;

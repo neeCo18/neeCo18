@@ -51,7 +51,6 @@ a {
     font-weight: bold;
     background-color: rgb(243, 243, 243);
     padding: 8px 8px 8px 8px;
-    border-radius: 8px;
 }
 
 .contact:hover {
@@ -219,13 +218,13 @@ a {
         width: 80%;
         padding: 20px;
         margin-top: 90px;
-        margin-bottom: auto;
+        margin-bottom: 90px;
         flex-direction: column;
         text-align: center;
     }
 
     .Name {
-        font-size: 20px;
+        font-size: 30px;
         text-align: left;
     }
 
@@ -235,12 +234,13 @@ a {
     }
 
     .desc {
-        text-align: left;
+        text-align: justify;
         margin: 10% 0 10% 0;
     }
 
     .deets {
         gap: 10px;
+        font-size: 12px;
         align-items: first baseline;
         flex-direction: column;
     }
