@@ -349,6 +349,7 @@ body {
     }
 
     .librarycard_desc {
+        opacity: 100;
         font-size: 15px;
     }
 
@@ -369,6 +370,7 @@ body {
     }
         
     .schedule_desc {
+        opacity: 100;
         font-size: 15px;
     }
     
@@ -377,6 +379,7 @@ body {
     }
 
     .valcard_desc {
+        opacity: 100;
         font-size: 15px;
     }
 
