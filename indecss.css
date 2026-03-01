@@ -1,4 +1,5 @@
-html{
+/* --- Global Styles --- */
+html {
     scroll-behavior: smooth;
 }
 
@@ -15,6 +16,7 @@ body {
     overflow-x: hidden;
 }
 
+/* --- Navigation Bar --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -26,14 +28,15 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.nav-row{
+.nav-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
 }
 
-.navoptions, a{
+.navoptions,
+a {
     text-decoration: none;
     align-items: baseline;
     display: flex;
@@ -43,29 +46,30 @@ body {
 }
 
 .navbar ul li {
-    font-size: 14px;
+    font-size: clamp(12px, 1.2vw, 14px);
     cursor: pointer;
     white-space: nowrap;
 }
 
-.contact{
+/* Navigation Hover Effects & Contact Button */
+.contact {
     color: rgb(27, 27, 27);
     font-weight: bold;
     background-color: rgb(243, 243, 243);
-    padding: 8px 8px 8px 8px;
+    padding: 8px;
 }
 
-.contact:hover{
+.contact:hover {
     color: rgb(243, 243, 243);
     background-color: rgb(86, 86, 86);
 }
 
-.navbar ul li:not(.contact) a:hover{
+.navbar ul li:not(.contact) a:hover {
     color: rgb(126, 126, 126);
 }
 
-
-.brand{
+/* Brand Identity in Nav */
+.brand {
     gap: 20px;
     align-items: baseline;
     display: flex;
@@ -85,7 +89,7 @@ body {
     padding: 5px;
     text-align: center;
     width: 100%;
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
     color: rgb(37, 37, 37);
     background-color: rgb(244, 244, 244);
 }
@@ -94,6 +98,47 @@ body {
     transform: translateY(-100%);
 }
 
+/* --- Hero / Landing Section --- */
+.landing {
+    color: white;
+    margin-top: 18%;
+    margin-bottom: 18%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.landing p{
+    margin-top: 120px;
+}
+
+.landingtext {
+    letter-spacing: -3px;
+    font-size: clamp(40px, 8vw, 70px);
+}
+
+.amazing {
+    color: rgb(255, 251, 189);
+    transform: translateX(100px) translateY(-30px);
+    font-size: clamp(55px, 12vw, 100px);
+    font-family: "Bluu Next";
+    font-style: italic;
+}
+
+.together {
+    letter-spacing: -3px;
+    transform: translateX(-80px) translateY(-50px);
+    font-size: clamp(40px, 8vw, 70px);
+}
+
+/* --- Image Marquee Section --- */
 .marquee-container {
     width: 90%;
     overflow-x: auto;
@@ -104,7 +149,7 @@ body {
 }
 
 .marquee-container:active {
-    cursor: grabbing;   
+    cursor: grabbing;
 }
 
 .marquee-content {
@@ -119,50 +164,21 @@ body {
     z-index: -1;
 }
 
-.landing{
-    color: white;
-    margin-top: 18%;
+/* --- Main Content & Bio --- */
+.content {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 105px 0 105px 0;
+    background-color: rgb(34, 34, 34);
     align-items: center;
     justify-content: center;
 }
 
-.landing h1{
-    margin: 0;
-    padding: 0;
-}
-
-.landingtext{
+.content h2 {
     letter-spacing: -3px;
-    margin: 0;
-    padding: 0;
-    font-size: 70px;
-}
-
-.amazing {
-    color: rgb(255, 251, 189);
-    transform: translateX(100px) translateY(-30px);
-    font-size: 100px;
-    font-family: "Bluu Next";
-    font-style: italic;
-}
-
-.together {
-    letter-spacing: -3px;
-    transform: translateX(-80px) translateY(-50px);
-    font-size: 70px;
-}
-
-.content{
-    width: 90%;
-    margin: 0 auto;
-}
-
-.content h1{
-    letter-spacing: -3px;
-    font-size: 50px;
+    font-size: clamp(35px, 8vw, 50px);
     margin: 0;
 }
 
@@ -174,68 +190,61 @@ body {
     flex-direction: column;
     gap: 20px;
     margin: 0 auto;
-    padding: 0;
 }
 
-.hi {
-    font-weight: 500;
-    font-size: 80px;
+.content h1 {
+    margin: 0;
+    letter-spacing: -2px;
+    font-size: clamp(40px, 8vw, 70px);
     display: flex;
     justify-content: center;
 }
 
-.position{
+.position {
     justify-content: center;
     display: flex;
-    gap: 20px
-}
-.content p {
-    letter-spacing: -1px;
+    gap: 20px;
 }
 
-.desc{
-    margin: 50px auto;
-    width: 50%;
+.desc {
     text-align: justify;
-    justify-content: center;
-    font-weight: 100;
-    font-size: 25px;
+    width: auto;
+    margin: 50px auto;
+    padding: 0 15% 0 15%;
+    font-size: clamp(20px, 2.5vw, 25px);
     color: white;
-    padding-left: 0;
-
 }
 
-.gd {
-    color: rgb(255, 251, 189);
-    font-family: "Bluu Next";
-    text-decoration: underline;
-    font-style: italic;
-}
-
+.gd,
+.bd,
 .and {
     font-family: "Bluu Next";
 }
+
+.gd,
 .bd {
     color: rgb(255, 251, 189);
-    font-family: "Bluu Next";
     text-decoration: underline;
     font-style: italic;
 }
 
+/* --- Socials List --- */
 .socials {
+    flex-wrap: wrap;
     list-style: none;
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 80px 0 80px 0;
-    gap: 80px;
+    margin: 80px 0;
+    gap: 30px;
     color: white;
 }
 
-.socials li{
-    font-size: 20px;
+.socials li {
+    font-size: clamp(12px, 2vw, 20px);
 }
 
+/* --- Projects Section --- */
 .prjcts {
     display: flex;
     flex-wrap: nowrap;
@@ -246,7 +255,7 @@ body {
 
 .prjcts_title {
     color: white;
-    font-size: 80px;
+    font-size: clamp(40px, 9vw, 80px);
 }
 
 .prjcts ul {
@@ -260,80 +269,28 @@ body {
     color: white;
 }
 
-.prjcts a{
-    font-size: 30px;
+/* Project Links & Hover Descriptions */
+.prjcts a {
+    font-size: clamp(24px, 4vw, 30px);
     transition: 0.3s ease-in-out;
 }
 
-.prjcts_librarycard:hover {
-    color: rgb(255, 230, 119);
-    transition: 0.3s ease-in-out;
-    font-size: 50px;
-    opacity: 1;
-}
-
-.prjects_ul li:hover+.librarycard_desc {
-    opacity: 1;
-}
-
-.librarycard_desc {
-    opacity: 0;
-    font-size: 20px;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.prjcts_schedule:hover {
-    color: rgb(255, 230, 119);
-    transition: 0.3s ease-in-out;
-    font-size: 50px;
-    opacity: 1;
-}
-
-.prjects_ul li:hover+.schedule_desc {
-    opacity: 1;
-}
-
-.schedule_desc {
-    opacity: 0;
-    font-size: 20px;
-    transition: opacity 0.3s ease-in-out;
-}
-
+.prjcts_librarycard:hover,
+.prjcts_schedule:hover,
 .prjcts_valentinescard:hover {
     color: rgb(255, 230, 119);
-    transition: 0.3s ease-in-out;
-    font-size: 50px;
-    opacity: 1;
+    font-size: clamp(40px, 2vw, 50px);
 }
 
-.prjects_ul li:hover+.valcard_desc {
-    opacity: 1;
-}
-
-.valcard_desc {
-    opacity: 0;
-    font-size: 20px;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.prjcts_librarycard:after {
-    content: "↗";
-    margin-left: 2px;
-    display: inline-block;
-}
-
-.prjcts_schedule:after {
-    content: "↗";
-    margin-left: 2px;
-    display: inline-block;
-}
-
+.prjcts_librarycard:after,
+.prjcts_schedule:after,
 .prjcts_valentinescard:after {
     content: "↗";
     margin-left: 2px;
     display: inline-block;
 }
 
+/* --- Utilities & Back to Top --- */
 .empty {
     width: 90%;
     height: 300px;
@@ -344,192 +301,130 @@ body {
     height: 100px;
 }
 
-.backtotop{
+.backtotop {
     display: flex;
     justify-content: center;
     width: fit-content;
     position: fixed;
     color: rgb(37, 37, 37);
-    background-color: rgba(255, 255, 255, 0.823);
+    background-color: rgba(0, 0, 0, 0.823);
     bottom: 15px;
     right: 15px;
     border-radius: 25px;
     transition: transform 0.3s ease-in-out;
-}
-
-.backtotop{
-    color: rgb(37, 37, 37);
     font-weight: bold;
-    font-size: 12px;
-    padding: 0px 15px 0 15px;
+    font-size: clamp(10px, 1vw, 12px);
+    padding: 0 15px;
 }
 
-.backtotop p{
-    color: rgb(37, 37, 37);
-}
-
-.backtotop.hide{
+.backtotop.hide {
     transform: translateY(150%);
 }
 
-
+/* --- Responsive Media Queries --- */
 @media (max-width: 768px) {
 
-    .backtotop{
-        bottom: 15px;
-        right: 15px;
-    }
-
-    .name {
-        display: none;
-        padding: 0;
-        font-size: 20px;
-        flex-wrap: nowrap;
-    }
-
+    /* ===== NAV ===== */
+    .name,
     .designer {
         display: none;
     }
 
-     .navbar {
-        top: 0;
-        width: 100%;
-        flex-direction: column;
-        padding: 0;
-    }
-
     .nav-row {
-        display: flex;
         justify-content: center;
-        align-items: center;
-        padding: 0 15px;
+    }
+
+    /* ===== CONTENT SECTION ===== */
+    .content {
+        align-items: flex-start;
+        text-align: left;
+        padding: 80px 8vw;
+    }
+
+    .intro {
         width: 100%;
-    }
-
-    .navoptions {
-        padding: 0;
-        gap: 25px;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .navbar ul li {
-        font-size: 12px;
+        text-align: left;
     }
 
     .content h1 {
-        margin-top: 25%;
-        font-size: 60px;
+        justify-content: flex-start;
     }
-
-    .intro h1{
-        font-size: 3rem;
-    }
-    
 
     .position {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
     }
 
-    .position h1{
-        margin: 0;
-        padding: 0;
-        font-size: 25px;
+    .position h2 {
+        font-size: 20px;
         letter-spacing: -1px;
     }
 
-    .and{
-        transform: translateY(-20px);
-    }
-
-    .bd {
-        transform: translateY(-40px);
+    .and {
+        display: none;
     }
 
     .desc {
-        margin-top: 0;
-        width: 90%;
+        width: 80%;
+        text-align: justify;
+        padding: 0 40px 0 0;
+    }
+
+    .desc {
+        margin: 30px 0;
         font-size: 18px;
-        text-align: center;
+
     }
 
-    .empty{
-        height: 25px;
-    }
-.landing {
-        margin-top: 30%; /* Give it more breathing room from the fixed nav */
-        width: 95%;      /* Slightly wider to use mobile screen real estate */
+    /* ===== SOCIALS ===== */
+    .socials {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin: 40px 0;
+        padding: 0;
     }
 
-    .landingtext, .together {
-        font-size: 45px;      /* Significantly smaller for mobile */
-        letter-spacing: -1px; /* Less aggressive tracking */
-        transform: none;      /* Reset position to center naturally */
+    /* ===== HERO ===== */
+    .landing {
+        margin-top: 40vh;
+    }
+
+    .landingtext,
+    .together,
+    .amazing {
+        transform: none;
         text-align: center;
     }
 
     .amazing {
-        font-size: 55px;      /* Still larger than the rest, but manageable */
-        transform: translateY(-10px); /* Subtle overlap instead of 30px jump */
-        text-align: center;
-        display: block;       /* Ensures it sits on its own line properly */
+        transform: translateY(-10px);
     }
 
     .together {
-        transform: translateY(-20px); /* Bring it closer to "amazing" */
-    }
-    .marquee-content img {
-        height: 150px;
-    }
-
-    .socials {
-        padding: 0;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .socials li {
-        padding: 0;
-        font-size: 12px;
-    }
-
-    .prjcts_title {
-        font-size: 50px;
+        transform: translateY(-20px);
     }
     
+    .prjcts {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+        padding-left: 65px;
+        
+    }
+
+    /* ===== PROJECTS ===== */
     .prjects_ul {
         flex-direction: column;
-        font-size: 1px;
+        align-items: flex-start;
+        gap: 15px;
     }
 
-    .librarycard_desc {
-        opacity: 100;
-        font-size: 15px;
-    }
-
-    .prjcts_librarycard:hover {
-        font-size: 45px;
-    }
-        
-    .schedule_desc {
-        opacity: 100;
-        font-size: 15px;
-    }
-    
-    .prjcts_schedule:hover {
-        font-size: 45px;
-    }
-
+    .librarycard_desc,
+    .schedule_desc,
     .valcard_desc {
-        opacity: 100;
-        font-size: 15px;
-    }
-
-    .prjcts_valentinescard:hover {
-        font-size: 45px;
+        opacity: 1;
     }
 }

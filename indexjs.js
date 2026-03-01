@@ -1,4 +1,4 @@
-  const slider = document.querySelector('.marquee-container');
+  /*-const slider = document.querySelector('.marquee-container');
         let isDown = false;
         let startX;
         let scrollLeft;
@@ -27,6 +27,8 @@
             const walk = (x - startX) * 2; // Multiplier of 2 for faster scrolling
             slider.scrollLeft = scrollLeft - walk;
         });
+
+        -*/
 
         let lastScrollTop = 0;
             const navbar = document.querySelector(".navbar");
