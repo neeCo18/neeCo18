@@ -375,6 +375,11 @@ body {
 
 @media (max-width: 768px) {
 
+    .backtotop{
+        bottom: 15px;
+        right: 15px;
+    }
+
     .name {
         display: none;
         padding: 0;
@@ -418,27 +423,78 @@ body {
         font-size: 60px;
     }
 
-    .gd {
-        margin-top: -35px;
-        font-size: 16px;
+    .intro h1{
+        font-size: 3rem;
+    }
+    
+
+    .position {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .position h1{
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+        letter-spacing: -1px;
+    }
+
+    .and{
+        transform: translateY(-20px);
+    }
+
+    .bd {
+        transform: translateY(-40px);
     }
 
     .desc {
+        margin-top: 0;
+        width: 90%;
         font-size: 18px;
-        padding-right: 10px;
-        text-align: justify;
+        text-align: center;
     }
 
+    .empty{
+        height: 25px;
+    }
+.landing {
+        margin-top: 30%; /* Give it more breathing room from the fixed nav */
+        width: 95%;      /* Slightly wider to use mobile screen real estate */
+    }
+
+    .landingtext, .together {
+        font-size: 45px;      /* Significantly smaller for mobile */
+        letter-spacing: -1px; /* Less aggressive tracking */
+        transform: none;      /* Reset position to center naturally */
+        text-align: center;
+    }
+
+    .amazing {
+        font-size: 55px;      /* Still larger than the rest, but manageable */
+        transform: translateY(-10px); /* Subtle overlap instead of 30px jump */
+        text-align: center;
+        display: block;       /* Ensures it sits on its own line properly */
+    }
+
+    .together {
+        transform: translateY(-20px); /* Bring it closer to "amazing" */
+    }
     .marquee-content img {
         height: 150px;
     }
 
     .socials {
+        padding: 0;
+        flex-wrap: nowrap;
+        flex-direction: column;
         gap: 10px;
     }
 
     .socials li {
-        font-size: 15px;
+        padding: 0;
+        font-size: 12px;
     }
 
     .prjcts_title {
