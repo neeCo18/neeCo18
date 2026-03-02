@@ -241,7 +241,7 @@ a {
 }
 
 .socials li {
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: clamp(10px, 2vw, 20px);
 }
 
 /* --- Projects Section --- */
