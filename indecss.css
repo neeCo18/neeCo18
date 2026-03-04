@@ -33,6 +33,19 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    animation: anime 1s ease forwards;
+}
+
+@keyframes anime {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .navoptions,
@@ -92,6 +105,7 @@ a {
     font-size: clamp(10px, 1vw, 12px);
     color: rgb(37, 37, 37);
     background-color: rgb(244, 244, 244);
+    animation: anime 1s ease forwards;
 }
 
 .navbar.hide {
